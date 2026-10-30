@@ -9,3 +9,4 @@ body{font-size:15px}.eyebrow,.nav a,.button,.text-link,.brand,.brand small,.serv
 .eyebrow,.nav a,.button,.text-link,.brand,.brand small,.service-card h3,.team-grid h3,.diff-grid h3,.benefit h3,.steps h3,.faq summary,.footer nav a,.footer>div>a,.footer small{font-size:12px}.map-placeholder{padding:10px}
 @media(max-width:850px){.header-book{min-height:44px}.service-card .button{min-height:44px}}
 .whatsapp-icon{width:18px;height:18px;flex:none;vertical-align:middle}.header-book .whatsapp-icon{width:16px;height:16px}
+.site-shell{overflow:visible}.header{position:sticky;top:0;z-index:20}
