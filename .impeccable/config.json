@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "kicker-above-heading",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-30T02:56:34.987Z",
+        "reason": "User-approved visual mockup places these eyebrow labels above section titles; keep its exact hierarchy."
+      }
+    ]
+  }
+}

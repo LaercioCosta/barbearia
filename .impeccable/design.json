@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-29T00:00:00-03:00",
+  "title": "Design System: Barbearia Premium",
+  "extensions": {
+    "colorMeta": {
+      "aged-gold": {
+        "role": "primary",
+        "displayName": "Aged Gold",
+        "canonical": "#b89a60",
+        "tonalRamp": ["#211b10", "#392e19", "#514123", "#69532d", "#816738", "#997b4c", "#b89a60", "#d3bc8e"]
+      },
+      "gold-light": {
+        "role": "secondary",
+        "displayName": "Soft Gold",
+        "canonical": "#c9a968",
+        "tonalRamp": ["#241c0e", "#3f3018", "#5b4422", "#77592c", "#936f3b", "#ad8952", "#c9a968", "#dfc391"]
+      },
+      "black": {
+        "role": "neutral",
+        "displayName": "Barber Black",
+        "canonical": "#0d0d0d",
+        "tonalRamp": ["#090909", "#0d0d0d", "#171717", "#292929", "#404040", "#5c5c5c", "#818181", "#b0b0b0"]
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Night Canvas",
+        "canonical": "#080908",
+        "tonalRamp": ["#080908", "#10110f", "#1c1d1b", "#2e2f2d", "#454644", "#626361", "#858684", "#b3b4b2"]
+      },
+      "charcoal": {
+        "role": "neutral",
+        "displayName": "Charcoal Panel",
+        "canonical": "#151615",
+        "tonalRamp": ["#111211", "#151615", "#222322", "#333433", "#494a49", "#656665", "#898a89", "#b6b7b6"]
+      },
+      "charcoal-raised": {
+        "role": "neutral",
+        "displayName": "Deep Charcoal",
+        "canonical": "#1c1c1c",
+        "tonalRamp": ["#121212", "#1c1c1c", "#292929", "#3b3b3b", "#535353", "#707070", "#949494", "#bdbdbd"]
+      },
+      "ivory": {
+        "role": "neutral",
+        "displayName": "Warm Ivory",
+        "canonical": "#f4efe6",
+        "tonalRamp": ["#292722", "#45423c", "#625e57", "#807b73", "#9f9a91", "#bdb8af", "#dad5cc", "#f4efe6"]
+      },
+      "warm-gray": {
+        "role": "neutral",
+        "displayName": "Warm Gray",
+        "canonical": "#c1bbb0",
+        "tonalRamp": ["#282621", "#44423d", "#605e58", "#7d7a73", "#9b978e", "#b3aea4", "#c1bbb0", "#d8d3ca"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Editorial Display", "purpose": "Hero and section headlines in Oswald." },
+      "body": { "displayName": "Reading and Controls", "purpose": "Body copy, navigation, and controls in DM Sans." },
+      "label": { "displayName": "Eyebrow Label", "purpose": "Compact uppercase section labels in DM Sans." }
+    },
+    "shadows": [
+      { "name": "shell-shadow", "value": "0 14px 70px #000", "purpose": "Separates the centered desktop page shell from its photographic backdrop." }
+    ],
+    "motion": [
+      { "name": "control-transition", "value": "0.2s", "purpose": "Subtle color and lift transitions for buttons and links; reduced-motion mode minimizes transitions." },
+      { "name": "image-hover", "value": "0.3s", "purpose": "Small image scale transition for interactive gallery items." }
+    ],
+    "breakpoints": [
+      { "name": "compact-layout", "value": "850px" },
+      { "name": "mobile-layout", "value": "520px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main booking action on dark surfaces.",
+      "html": "<a class=\"ds-button-primary\" href=\"#contato\">Agendar horário</a>",
+      "css": ".ds-button-primary { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 0 18px; border: 1px solid transparent; border-radius: 3px; background: var(--gold); color: #100e09; font: 700 12px 'DM Sans', Arial, sans-serif; text-decoration: none; transition: background .2s, transform .2s; } .ds-button-primary:hover { background: var(--gold-light); transform: translateY(-1px); } .ds-button-primary:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action beside the gold booking button.",
+      "html": "<a class=\"ds-button-outline\" href=\"#servicos\">Ver serviços</a>",
+      "css": ".ds-button-outline { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 0 18px; border: 1px solid var(--line); border-radius: 3px; background: rgba(0,0,0,.45); color: var(--ivory); font: 700 12px 'DM Sans', Arial, sans-serif; text-decoration: none; transition: border-color .2s, color .2s; } .ds-button-outline:hover { border-color: var(--gold); color: var(--gold-light); } .ds-button-outline:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "description": "Quiet ivory link in the compact desktop navigation row.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Navegação\"><a href=\"#servicos\">Serviços</a></nav>",
+      "css": ".ds-nav a { color: var(--ivory); font: 400 12px 'DM Sans', Arial, sans-serif; text-decoration: none; transition: color .2s; } .ds-nav a:hover { color: var(--gold-light); } .ds-nav a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }"
+    },
+    {
+      "name": "Service Card",
+      "kind": "card",
+      "refersTo": "service-card",
+      "description": "Image-led service summary with a clear booking action.",
+      "html": "<article class=\"ds-service-card\"><h3>CORTE MASCULINO</h3><p>Corte personalizado para o seu estilo.</p><a href=\"#contato\">Agendar</a></article>",
+      "css": ".ds-service-card { padding: 12px; border: 1px solid rgba(184,154,96,.24); border-radius: 5px; background: #121312; color: var(--ivory); font-family: 'DM Sans', Arial, sans-serif; } .ds-service-card h3 { margin: 0 0 4px; font-size: 12px; text-transform: uppercase; } .ds-service-card p { color: var(--muted); font-size: 12px; line-height: 1.3; } .ds-service-card a { color: var(--gold-light); font-size: 12px; } .ds-service-card a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }"
+    },
+    {
+      "name": "FAQ Disclosure",
+      "kind": "custom",
+      "description": "Native disclosure row with a gold open-state cue.",
+      "html": "<details class=\"ds-faq\"><summary>Preciso agendar horário?</summary><p>O agendamento é recomendado. Fale com a equipe.</p></details>",
+      "css": ".ds-faq { padding: 10px; border: 1px solid rgba(184,154,96,.28); border-radius: 3px; background: #101110; color: var(--ivory); font: 400 12px 'DM Sans', Arial, sans-serif; } .ds-faq summary { cursor: pointer; font-weight: 600; } .ds-faq summary::marker { color: var(--gold); } .ds-faq[open] summary { color: var(--gold-light); } .ds-faq summary:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; } .ds-faq p { color: var(--muted); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Gilded Barber Editorial",
+    "overview": "This visual world faithfully reconstructs the supplied barbershop mockup: a luxury dark editorial canvas, compact cinematic desktop composition, warm amber photography, restrained aged gold, and confident condensed headings. It feels considered and tactile, with a clear visual rhythm that lets the imagery and typography carry the experience. The desktop page uses the reference's wide centered frame and same section order. At mobile widths it becomes a compact header and a vertically stacked, single-column reading flow while preserving the identity and content hierarchy. Eyebrows sit directly above their associated headings, as approved in the final design review.",
+    "keyCharacteristics": [
+      "Black and charcoal surfaces with thin, quiet gold borders.",
+      "Warm cinematic barber and interior photography, with dark overlays for readable text.",
+      "Ivory Oswald headlines paired with DM Sans navigation, body copy, and controls.",
+      "Dense, image-led sections on desktop; touch-friendly stacked sections on mobile."
+    ],
+    "rules": [
+      { "name": "The Gold Restraint Rule", "body": "Keep gold as a focused accent; it should guide attention without becoming a broad background color.", "section": "colors" },
+      { "name": "The Two-Voice Rule", "body": "Use Oswald for display headlines and DM Sans for everything that must read quickly, including body text and controls.", "section": "typography" }
+    ],
+    "dos": [
+      "Do preserve the approved mockup's section order and desktop/mobile structure.",
+      "Do keep eyebrows directly above their associated headings.",
+      "Do use warm amber photography with dark overlays wherever text shares the image.",
+      "Do preserve keyboard-visible focus and reduced-motion behavior."
+    ],
+    "donts": [
+      "Don't introduce bright color accents or broad gold-filled surfaces.",
+      "Don't change the condensed display and clean sans-serif pairing.",
+      "Don't turn visual placeholders or illustrative content into verified business facts; product details remain configurable until confirmed."
+    ]
+  }
+}
